@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<script type = "text/javascript" 
+         src = "{{ url_for('static', filename = 'js/scripts.js') }}" ></script>
+     
+      <style >
+      	body{
+      		background-image: url("bckgrnd.jpeg");
+      		text-align: center;
+      		color: black;
+      		font-style: bold;
+      	}
+      </style>
+</head>
+<body >
+<form action=" {{ url_for('register') }} " method="POST" class="bck" enctype="multipart/form-data">
+	Name:<input type="text" name="name"><br>
+	<br>Email:<input type="email" name="rollno" ><br>
+	<br>Description:<input type="text" name="branch"><br>
+	   <br>image:<input type="file" name="image" accept="image/*">
+	<br><br><input type = "button" name="send" onclick = "Welcome()" value = "Send" />
+	<p id="s1" />
+</form>
+</body>
+</html>
